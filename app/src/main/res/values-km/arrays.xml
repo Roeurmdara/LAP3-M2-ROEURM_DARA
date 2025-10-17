@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category_options">
+        <item>អាហារ</item>
+        <item>ការដឹកជញ្ជូន</item>
+        <item>គ្រឿងផ្សារទំនើប</item>
+        <item>ឧបករណ៍ប្រើប្រាស់</item>
+        <item>កម្សាន្ត</item>
+        <item>ការអប់រំ</item>
+    </string-array>
+</resources>

@@ -1,0 +1,26 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Expense Tracker</string>
+
+    <!-- MainActivity texts -->
+
+    <string name="title_manage_expense">Manage Your Expense, Dara</string>
+    <string name="last_expense_text">My last expense was 0</string>
+    <string name="btn_add_expense">Add New Expense</string>
+    <string name="btn_view_detail">View Detail Expense</string>
+
+    <!-- AddExpenseActivity texts -->
+    <string name="hint_amount">Amount</string>
+    <string name="hint_remark">Remark</string>
+    <string name="hint_created_date">Created Date</string>
+    <string name="btn_add_expenses">Add Expense</string>
+    <!--Detail-->
+    <string name="tv_amount">Amount:</string>
+    <string name="tv_currency">Currency:</string>
+    <string name="tv_category">Category:</string>
+    <string name="tv_remark">Remark:</string>
+    <string name="tv_date">Created Date:</string>
+    <string name="btn_add_new_expense">Add New Expense</string>
+    <string name="btn_back_home">Back to Home</string>
+
+</resources>
