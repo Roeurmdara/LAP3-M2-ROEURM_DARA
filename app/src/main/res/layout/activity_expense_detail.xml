@@ -1,56 +1,87 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F9FAFB"
     android:padding="20dp">
 
-    <View
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="70dp" />
+        android:layout_height="wrap_content">
 
-    <!-- Display Expense Details -->
-    <TextView
-        android:id="@+id/tvAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_amount" />
+        <!-- Top Spacer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
 
-    <TextView
-        android:id="@+id/tvCurrency"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_currency" />
+        <!-- Card-like container for expense details -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@drawable/rounded_card"
+            android:elevation="4dp">
 
-    <TextView
-        android:id="@+id/tvCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_category" />
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_amount"
+                android:textColor="#111827"
+                android:textSize="18sp"
+                android:paddingBottom="8dp"/>
 
-    <TextView
-        android:id="@+id/tvRemark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_remark" />
+            <TextView
+                android:id="@+id/tvCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_currency"
+                android:textColor="#4B5563"
+                android:paddingBottom="8dp"/>
 
-    <TextView
-        android:id="@+id/tvDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_date"
-        android:paddingBottom="20dp"/>
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_category"
+                android:textColor="#4B5563"
+                android:paddingBottom="8dp"/>
 
-    <!-- Buttons -->
-    <Button
-        android:id="@+id/btnAddNewExpense"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_add_new_expense"/>
+            <TextView
+                android:id="@+id/tvRemark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_remark"
+                android:textColor="#4B5563"
+                android:paddingBottom="8dp"/>
 
-    <Button
-        android:id="@+id/btnBackHome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_back_home"
-        android:layout_marginTop="10dp"/>
-</LinearLayout>
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_date"
+                android:textColor="#4B5563"
+                android:paddingBottom="8dp"/>
+        </LinearLayout>
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnAddNewExpense"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/btn_add_new_expense"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btnBackHome"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/btn_back_home"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button_secondary"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+</ScrollView>

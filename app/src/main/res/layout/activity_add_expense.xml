@@ -2,13 +2,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F9FAFB"
     android:padding="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Spacer to push content down -->
+        <!-- Top Spacer -->
         <View
             android:id="@+id/spacerTop"
             android:layout_width="0dp"
@@ -17,13 +18,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Amount input (supports decimals) -->
+        <!-- Amount input -->
         <EditText
             android:id="@+id/etAmount"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:hint="@string/hint_amount"
             android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="#111827"
+            android:textSize="16sp"
             app:layout_constraintTop_toBottomOf="@id/spacerTop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -32,8 +37,9 @@
         <Spinner
             android:id="@+id/spCurrency"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_spinner"
             app:layout_constraintTop_toBottomOf="@id/etAmount"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -42,8 +48,9 @@
         <Spinner
             android:id="@+id/spCategory"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_spinner"
             app:layout_constraintTop_toBottomOf="@id/spCurrency"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -52,9 +59,13 @@
         <EditText
             android:id="@+id/etRemark"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
             android:hint="@string/hint_remark"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="#111827"
+            android:textSize="16sp"
             app:layout_constraintTop_toBottomOf="@id/spCategory"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -63,10 +74,14 @@
         <EditText
             android:id="@+id/etDate"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
             android:focusable="false"
             android:hint="@string/hint_created_date"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="#111827"
+            android:textSize="16sp"
             app:layout_constraintTop_toBottomOf="@id/etRemark"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -75,12 +90,15 @@
         <Button
             android:id="@+id/btnAddExpense"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
             android:text="@string/btn_add_expenses"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_button"
+            app:layout_constraintTop_toBottomOf="@id/etDate"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/etDate" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

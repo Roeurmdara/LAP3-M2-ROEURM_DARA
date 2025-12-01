@@ -2,12 +2,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp">
+    android:padding="24dp"
+    android:background="#F9FAFB">
 
-    <!-- Spacer to push content down -->
+    <!-- Top Spacer -->
     <View
         android:layout_width="match_parent"
-        android:layout_height="70dp" />
+        android:layout_height="60dp" />
 
     <!-- Title -->
     <TextView
@@ -15,41 +16,58 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_manage_expense"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:paddingBottom="20dp"/>
+        android:textColor="#111827"
+        android:paddingBottom="16dp" />
 
-    <!-- Last Expense -->
+    <!-- Last Expense Label -->
     <TextView
         android:id="@+id/tvLastExpense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/last_expense_text"
         android:textSize="18sp"
-        android:paddingBottom="20dp"/>
+        android:textColor="#4B5563"
+        android:paddingBottom="28dp" />
 
-    <!-- Buttons in one row -->
+    <!-- Button Row -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2">
+        android:weightSum="2"
+        android:gravity="center">
 
+        <!-- Add Expense Button -->
         <Button
             android:id="@+id/btnAddExpense"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_add_expense"/>
+            android:layout_height="50dp"
+            android:text="@string/btn_add_expense"
+            android:textSize="16sp"
+            android:backgroundTint="#2563EB"
+            android:textColor="#FFFFFF"
+            android:stateListAnimator="@null"
+            android:padding="10dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/rounded_button" />
 
+        <!-- View Detail Button -->
         <Button
             android:id="@+id/btnViewDetail"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="@string/btn_view_detail"
-            android:layout_marginStart="10dp"
+            android:textSize="16sp"
             android:enabled="false"
-            android:backgroundTint="@android:color/darker_gray"/>
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#9CA3AF"
+            android:stateListAnimator="@null"
+            android:padding="10dp"
+            android:background="@drawable/rounded_button_disabled" />
     </LinearLayout>
+
 </LinearLayout>
